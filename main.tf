@@ -54,7 +54,7 @@ resource "aws_security_group" "elasticache_sg" {
 #}
 
 resource "aws_elasticache_cluster" "elastic_cache" {
-  cluster_id           = "${var.env}_elasti_cache_cluster"
+  cluster_id           = "${var.env}-elasti-cache-cluster"
   engine               = "redis"
   node_type            = var.node_type
   num_cache_nodes      = var.num_cache_nodes
