@@ -62,7 +62,7 @@ resource "aws_elasticache_cluster" "elastic_cache" {
   port                 = 6379
   subnet_group_name    = aws_elasticache_subnet_group.ec_subnet_group.name
   security_group_ids   = [aws_security_group.elasticache_sg.id]
-  tags                 = merge (local.common_tags, { Name = "${var.env}-elasticache_subnet_group" } )
+  tags                 = merge (local.common_tags, { Name = "${var.env}-elasticache_cluster" } )
 
 }
 
